@@ -13,7 +13,7 @@ public class Main {
 		boolean breakouter = false;
 		for (int i = numberstofind; i < Integer.MAX_VALUE && breakouter == false; i++) {
 			numberstofind = 20;
-			for (int j = 0; j < 20; j++) {
+			for (int j = 0; j < 20 && i % numberstofind == 0; j++) {
 				if (numberstofind == 0) {
 
 					break;
