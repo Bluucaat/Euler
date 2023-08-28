@@ -1,7 +1,7 @@
 package euler6;
 
 public class Main {
-
+	
 	public static void main(String[] args) {
 		/*
 		 * The sum of the squares of the first ten natural numbers is, 385 The square of
