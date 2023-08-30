@@ -2,6 +2,7 @@ package euler11;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -68,7 +69,10 @@ public class Main {
 			Collections.sort(products);
 			System.out.println(products.get(products.size() - 1));
 
-		} catch (FileNotFoundException e) {
+			sc.close();
+			fr.close();
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
