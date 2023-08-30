@@ -13,8 +13,9 @@ public class Main {
 
 	public static long primeSum() {
 		int count = 0;
-		//locating the least possible space, by estimating the ammount of primes under N, and multiplying to make sure its higher. (Prime number theorem)
-		int[] arr = new int[(int)((2000000 / (int)Math.log(2000000))*1.05)];
+		// locating the least possible space, by estimating the ammount of primes under
+		// N, and multiplying to make sure its higher. (Prime number theorem)
+		int[] arr = new int[(int) ((2000000 / (int) Math.log(2000000)) * 1.05)];
 		arr[0] = 2;
 		long primesum = 2;
 		int primesfound = 1;
@@ -38,7 +39,6 @@ public class Main {
 
 		}
 		return primesum;
-		
 
 	}
 
