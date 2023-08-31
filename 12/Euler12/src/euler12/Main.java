@@ -1,17 +1,17 @@
 package euler12;
 
 public class Main {
-
+	
 	public static void main(String[] args) {
+		//What is the value of the first triangle number to have over five hundred divisors?
 		int divisorsFound = 0;
 		int i = 0;
 		boolean numberNotFound = true;
 
 		while (numberNotFound) {
-
 			divisorsFound = (int) getTotalDivisors(getTriangularNumber(i));
 			if (divisorsFound >= 500) {
-				System.out.println((long) getTriangularNumber(i) + " " + divisorsFound);
+				System.out.println((long) getTriangularNumber(i));
 				numberNotFound = false;
 			}
 			i++;
