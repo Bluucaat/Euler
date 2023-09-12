@@ -17,10 +17,11 @@ def isAmicable(a, b):
 def main():
     amicableSummed = 0
     for i in range(1, 10000):
-        for j in range(1, 10000):
-            if isAmicable(i, j):
-                amicableSummed = amicableSummed + i
-                print(amicableSummed)
+
+        divisorsOfNumber1 = sumOfDivisors(i)
+        if isAmicable(i, divisorsOfNumber1):
+            amicableSummed = amicableSummed + i
+
     print(amicableSummed)
 
 

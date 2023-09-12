@@ -20,12 +20,11 @@ public class Main {
 
         long amicableSummed = 0;
         for (int i = 1; i < 10000; i++) {
-            for (int j = 1; j < 10000; j++) {
-                if (isAmicable(i, j)) {
-                    System.out.println(amicableSummed);
-                    amicableSummed += i;
-                }
+            int divisorsOfNumber = sumOfDivisors(i);
+            if (isAmicable(i, divisorsOfNumber)) {
+                amicableSummed += i;
             }
+
         }
         System.out.println(amicableSummed);
     }
