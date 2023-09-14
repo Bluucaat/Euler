@@ -1,0 +1,50 @@
+package org.example;
+
+import java.util.ArrayList;
+
+public class Main {
+    public static boolean isAbundant(int n) {
+        int divisorSum = 1;
+        for (int i = 2; i < Math.sqrt(n); i++) {
+
+            if (n % i == 0) {
+                divisorSum = divisorSum + i + (n / i);
+                if (divisorSum > n) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        long notAbundantSum = 0;
+        ArrayList<Integer> abundantList = new ArrayList<>();
+        ArrayList<Integer> abundantSumList = new ArrayList<>();
+        int count = 0;
+        for (int i = 1; i <= 28123; i++) {
+            if (isAbundant(i)) {
+                abundantList.add(i);
+            }
+        }
+
+        for (Integer integer1 : abundantList) {
+            for (Integer integer2 : abundantList) {
+                abundantSumList.add(integer1 + integer2);
+            }
+        }
+
+        for (int i = 1; i <= 28123; i++) {
+            count = 0;
+            if (abundantSumList.contains(i)) {
+                count++;
+            }
+            if (count == 0) {
+                notAbundantSum += i;
+                System.out.println(i);
+            }
+        }
+
+        System.out.println(notAbundantSum);
+    }
+}
